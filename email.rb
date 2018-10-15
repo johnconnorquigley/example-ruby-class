@@ -45,21 +45,21 @@ class Email
          }
      end
 
-  class ReceivedLine < HashManager
- 		def initialize(entity)
+     class ReceivedLine < HashManager
+ 		    def initialize(entity)
        		super(self.prepare(entity))
-     	end
+     	  end
 
- 		def prepare(entity)
- 			hash = {}
- 			hash['from'] = entity[:from]
+ 		     def prepare(entity)
+ 			       hash = {}
+ 			       hash['from'] = entity[:from]
              hash['by'] = entity[:by]
              hash['with'] = entity[:with]
              hash['id'] = entity[:id]
              hash['via'] = entity[:for]
              hash['time'] = entity[:time]
- 			return hash
- 		end
- 	end
-  
- end
+ 			       return hash
+ 		     end
+ 	   end
+
+end
